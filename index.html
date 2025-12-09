@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-      <h2>CGPA Calculator</h2>
+    <div class="container">
+        <div>
+            <h2>CGPA Calculator</h2>
+            <p class="subtitle">Enter your subjects to calculate your score</p>
+        </div>
 
-  <div id="subjects-container"></div>
+        <div class="controls">
+            <input type="number" id="subCount" placeholder="No. of Subjects" min="1" max="15">
+            <button class="btn-primary" id="generate">Start</button>
+        </div>
 
-  <button id="add-subject">+ Add Subject</button>
-  <button id="calculate">Calculate CGPA</button>
+        <div id="subjects-container"></div>
 
-  <h3 id="result"></h3>
+        <div class="actions" id="action-buttons">
+            <button class="btn-success" id="calculate">Calculate CGPA</button>
+            <button class="btn-reset" id="reset">Reset</button>
+        </div>
 
-  <script src="script.js"></script>
+        <!-- New Result Card -->
+        <div id="result-section">
+            <div class="result-card">
+                <div class="score-label">Final CGPA</div>
+                <div class="score-value" id="final-score">0.00</div>
+                <div class="score-message" id="score-message">Excellent Work!</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
